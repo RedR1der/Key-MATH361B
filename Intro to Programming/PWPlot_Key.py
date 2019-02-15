@@ -1,11 +1,9 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-def func_name(param1, param2):
-    N=int(input("How many points do you want in your plot? "))
-    xVals=np.linspace(param1,param2,N)
+def func_name(param1):
     myYs=[]
-    for x in xVals:
+    for x in param1:
         if x < -2:
             myYs.append(-3*((x+2)**2)+1) #V
         elif (x >= -2) and (x < -1):
@@ -19,10 +17,13 @@ def func_name(param1, param2):
     finPlot=plt.plot(xVals,myYs)
     return finPlot
 
-startPt=float(input("What is your starting x value? "))
-endPt=float(input("What is your ending x value? "))
-aPlot=func_name(startPt,endPt)
+N=int(input("How many points do you want in your plot? "))
+
+xVals=np.linspace(-3,3,N)
+
+aPlot=func_name(xVals)
 titPlot=plt.title("I.7 Piecewise Function")
 yLabel=plt.ylabel("y")
 xLabel=plt.xlabel("x")
+
 print(aPlot)
