@@ -14,7 +14,7 @@ def func_name(param1):
             myYs.append(np.sin((np.pi)*x)+3) #V
         else:
             myYs.append(3*np.sqrt(x-2)+4) #V
-    finPlot=plt.plot(xVals,myYs)
+    finPlot=plt.plot(param1,myYs)
     return finPlot
 
 N=int(input("How many points do you want in your plot? "))
