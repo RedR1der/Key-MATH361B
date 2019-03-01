@@ -1,7 +1,6 @@
 import numpy as np
 
 PyTrip=int(input("Enter a sum of a pythagorean triple: "))
-Pymat=np.zeros([0,3])
 Tripmat=np.zeros([0,4])
 
 for bb in range(2,PyTrip):
