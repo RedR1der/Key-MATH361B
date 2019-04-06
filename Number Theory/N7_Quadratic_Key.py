@@ -32,11 +32,11 @@ for i in range(len(PrimeNums)):
     for ii in range(PrimeNums[i]): #Check if lower bound should be 1 or 0
         QuadRes.append((ii**2) % PrimeNums[i])
         if ((ii**2)+1) % PrimeNums[i] == 0:#if ((ii**2)-(PrimeNums[i]-1)) % PrimeNums[i] == 0:#
-            Answer=1
+           Answer=1
     for quads in QuadRes:
         while QuadRes.count(quads) > 1:
             QuadRes.remove(quads)
-    print("Quads for",PrimeNums[i],"are",QuadRes)
+    #print("Quads for",PrimeNums[i],"are",QuadRes)
     count[1,i] = len(QuadRes) #REMINDER: Row 0 is the prime numbers and row 1 is the number of quads
     neg_one[1,i] = Answer
     print("%-5d %-5d %31d" % (count[0,i], count[1,i], neg_one[1,i]))
